@@ -1,11 +1,18 @@
 import Headers from '../components/Headers';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="container">
       <Headers/>
 
-      <img src="/cultureaflot.png" className="logo"/>
+      <Image
+        src="/images/cultureaflot.png"
+        alt="Culture a flot logo"
+        width={600}
+        height={600}
+        className="logo"
+      />
 
       <style jsx>{`
         .container {
@@ -17,8 +24,8 @@ export default function Home() {
         }
         
         .logo {
-        width: 80%;
-        max-width: 600px;
+          width: 80%;
+          max-width: 600px;
        } 
       `}</style>
 

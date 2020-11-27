@@ -1,4 +1,5 @@
 import Headers from '../components/Headers';
+import Image from 'next/image';
 
 export default function Hifi({ baseUrl }) {
   const mapurl = `${baseUrl}/api/hifi/map?baseUrl=${baseUrl}`;
@@ -9,7 +10,13 @@ export default function Hifi({ baseUrl }) {
 
       <main>
         <div className="header">
-          <img src="/cultureaflot.png" className="logo"/>
+          <Image
+            src="/images/cultureaflot.png"
+            alt="Culture a flot logo"
+            width={60}
+            height={60}
+            className="logo"
+          />
         </div>
 
         <div className="room-container">
