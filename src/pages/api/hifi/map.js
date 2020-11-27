@@ -11,7 +11,7 @@ const defaultMap = {
   "maps": [
     {
       "mapName": "test",
-      "mapImageSrc": "hifi/bg.jpg",
+      "mapImageSrc": "images/hifi-bg.jpg",
       "mapLandmarks": [
         {
           "name": "YouTube",
