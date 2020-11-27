@@ -38,8 +38,13 @@ export default async function handler(req, res) {
 
   const baseUrl = req.query.baseUrl;
 
-  const map = defaultMap;
-  map.maps = map.maps.map(m => Object.assign({}, m, { mapImageSrc: `${baseUrl}/${m.mapImageSrc}`}));
+  const map = {
+    ...defaultMap,
+    maps: defaultMap.maps.map(m => ({
+      ...m,
+      mapImageSrc: `${baseUrl}/${m.mapImageSrc}`,
+    })),
+  };
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');

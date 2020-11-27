@@ -2,6 +2,7 @@ import Headers from '../components/Headers';
 
 export default function Hifi({ baseUrl }) {
   const mapurl = `${baseUrl}/api/hifi/map?baseUrl=${baseUrl}`;
+
   return (
     <div className="container">
       <Headers/>
@@ -78,8 +79,8 @@ export default function Hifi({ baseUrl }) {
 }
 
 Hifi.getInitialProps = async ({ req }) => {
-  let protocol = 'https:'
-  let host = req ? req.headers.host : window.location.hostname
+  let protocol = 'https:';
+  let host = req ? req.headers.host : window.location.hostname;
   if (host.indexOf('localhost') > -1) {
     protocol = 'http:'
   }
